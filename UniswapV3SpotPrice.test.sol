@@ -16,8 +16,7 @@ contract UniswapV3SwapTest is Test {
     IUniswapV3Pool private immutable pool =
         IUniswapV3Pool(UNISWAP_V3_POOL_USDC_WETH_500);
 
-    // Exercise 1
-    // - Get price of WETH in terms of USDC and return price with 18 decimals
+    // Get price of WETH in terms of USDC and return price with 18 decimals
     function test_spot_price_from_sqrtPriceX96() public {
         uint256 price = 0;
         IUniswapV3Pool.Slot0 memory slot0 = pool.slot0();
